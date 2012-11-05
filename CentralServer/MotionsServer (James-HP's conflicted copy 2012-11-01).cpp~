@@ -1,0 +1,426 @@
+
+
+#include "MotionsServer.h"
+#define ANGAL_FOR_TURN 15
+
+const double PI = 3.1415926;
+
+extern ArPathPlanningTask* G_PathPlanning;
+extern ArRobot robot;
+extern ArSick sick;
+
+
+extern ArVCC4* G_PTZHandler;		//from KeyPtz.cpp
+// extern ArAnalogGyro *G_gyro;
+
+int goals[8] = {250,1450,-1850,1750,-1850,260,298,-207};
+int headings[4] = {0,-90,180,90};
+
+int findNeigh bor(int *goals);
+int goalIndex = 0;
+int headingIndex = 0;
+
+void CoordinateCalculation(const double robotCurrentX, const double robotCurrentY, double* targetX, double* targetY, const double camAngle, const double robotHeading, const double movDistance);
+
+void basic_turn(int turnAngal)
+{
+  ArTime start;
+  
+  robot.lock();
+
+	robot.setHeading(robot.getTh()+turnAngal);
+  robot.unlock();
+  
+  start.setToNow();
+  while (1)
+  {
+	  robot.lock();
+	  if (robot.isHeadingDone())
+	  {
+		  printf(" Finished turn\n");
+		  robot.unlock();
+		  ArUtil::sleep(50);
+		  cout << " current heading: " << "    " << robot.getTh()<<endl;
+		  break;
+	  }
+	  if (start.mSecSince() > 5000)
+	  {
+		  printf(" Turn timed out\n");
+		  robot.unlock();
+		  cout << " current heading: " << "    " << robot.getTh()<<endl;
+		  break;
+	  }
+	  robot.unlock();
+	  ArUtil::sleep(10);
+  }  
+}
+
+void S_RobotMotion( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  
+  
+
+//-----------------------Formal Code for RobotMotion-------------------------------------------------  
+
+  if(goalIndex <= 7)
+  {
+    cout << robot.getPose().getX() << endl;
+    cout << robot.getPose().getY() << endl;
+		//  G_PathPlanning->pathPlanToPose(ArPose(300,0), true);
+
+
+    G_PathPlanning->pathPlanToPose(ArPose(goals[goalIndex++],goals[goalIndex++],headings[headingIndex++]), true,true);
+		cout << "RobotMotion is processing..." <<endl;
+
+    while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+		
+// 		goalIndex++;
+
+  }
+ 	else
+	{
+		goalIndex =0;
+		headingIndex = 0;
+	}   
+	serverclient->sendPacketTcp(socket);
+//-------------------------------------------------------------------------------------------------------
+
+}
+
+
+int CameraMoveCount = 0;
+int searchAngle[20] = {0,10,20,30,40,50,60,70,80,90,0,-10,-20,-30,-40,-50,-60,-70,-80,-90};
+void S_CameraMotion( ArServerClient *serverclient, ArNetPacket *socket)
+{
+//----------------- Old version of object searching through camera-------------------------------------
+
+ // G_PTZHandler->panSlew(1);
+	//switch (CameraMoveCount)
+	//{
+	//case 0: 
+	//	G_PTZHandler->panRel(-75);	//start from the left 
+	//	break;
+	//case 1:
+	//case 2:
+	//case 3:
+	//case 4:
+	//case 5:
+	//case 6:
+	//case 7:
+	//	G_PTZHandler->panRel(15);
+	//	
+	//	//G_PTZHandler->panRel(75); //reset
+	//}
+ // 
+ // CameraMoveCount++;
+	//if (CameraMoveCount==8) {CameraMoveCount=0; G_PTZHandler->panTilt(0,0);;}
+ // //ArTime timer;
+ // //timer.setToNow();
+	//cout << " Current pan = " << G_PTZHandler->getPan() << endl;
+
+//------------------------------------------------------------------------------------------------------
+
+	if(CameraMoveCount < 20)
+	{	
+		if(CameraMoveCount == 0)
+		{
+			G_PTZHandler->reset();
+		}
+		G_PTZHandler->panRel(searchAngle[CameraMoveCount]);
+	}
+	else
+	{
+		G_PTZHandler->reset();
+		CameraMoveCount = 0;
+	}
+
+
+
+	ArUtil::sleep(150);
+	//cout << timer.mSecSince() <<endl;
+	
+	serverclient->sendPacketTcp(socket);
+
+
+}
+
+
+
+void S_RobotTurnLeft( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  cout << "turn left" <<endl;
+  basic_turn(ANGAL_FOR_TURN);
+  serverclient->sendPacketTcp(socket);
+}
+
+
+void S_RobotTurnRight( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  cout << "turn right" <<endl;
+  basic_turn(-ANGAL_FOR_TURN);
+  serverclient->sendPacketTcp(socket);
+}
+
+
+void S_TargetApproach( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  cout << "The last step: TargetApproach!" <<endl;
+  
+  
+  
+  
+  double camAngle = 0.0;
+  double robotHeading = 0.0;
+  double robotCurrentX = 0.0;
+  double robotCurrentY = 0.0;
+  double angle = 0.0;
+  double distance =0.0;
+  
+  double targetX, targetY;
+  
+   //test mode
+//     G_PTZHandler->panRel(-30);
+   
+  
+  
+  camAngle =  -1 *G_PTZHandler->getPan(); 
+  robotHeading = robot.getPose().getTh();
+  robotCurrentX =  robot.getPose().getX() ;
+  robotCurrentY = robot.getPose().getY();
+ 
+  
+  
+//--------------- Set up the laser range device to read the distance from the target -----------------------------
+  
+
+  sick.lockDevice();
+  distance = sick.currentReadingPolar(robotHeading+ camAngle -10, robotHeading+ camAngle +10, &angle) - 500;
+//   double distance = sick.currentReadingPolar(89, 90, &angle);
+  cout << "The closest reading is " << distance << " at " << angle << " degree" << endl;
+  sick.unlockDevice();
+
+
+  
+//----------------------------------------------------------------------------------------------------------------
+  
+  
+  
+  cout << "Camera Angle is " << camAngle << endl;
+  G_PTZHandler->reset();
+  
+  cout << "before calculation, check originalX, originalY " << robotCurrentX << " " << robotCurrentY << " robotHeading is " << robotHeading << endl<<endl;  
+  CoordinateCalculation(robotCurrentX,robotCurrentY,&targetX,&targetY,camAngle,robotHeading,distance);
+  
+  cout << "before movement, check targetX, target Y" << targetX << " " << targetY << "robotHeading is "<< robotHeading << endl << endl;
+  
+
+  G_PathPlanning->pathPlanToPose(ArPose(targetX,targetY,camAngle+robotHeading),true,true);
+  cout << "RobotMotion is processing..." <<endl;
+
+  
+  while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL )
+  {
+    double currentCamAngle = G_PTZHandler->getPan();
+    double currentHeading = robot.getPose().getTh();
+    if(currentCamAngle+currentHeading != camAngle+robotHeading)
+    {
+      currentCamAngle = camAngle+robotHeading - currentHeading;
+    }
+    
+    G_PTZHandler->panRel(currentCamAngle);
+  }
+  
+  ArUtil::sleep(3000);
+  
+  
+  G_PathPlanning->pathPlanToPose(ArPose(220,20,0),true,true);
+  cout << "RobotMotion is heading home..." <<endl;
+//   while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+  
+  
+  serverclient->sendPacketTcp(socket);
+}
+
+
+
+void CoordinateCalculation(const double robotCurrentX,const double robotCurrentY,double *outputX,double *outputY,const double camAngle, const double robotHeading,const double movDistance)
+{
+	double originalX = robotCurrentX;
+	double originalY = robotCurrentY;
+
+	double angleRobot = robotHeading;
+	double angleCam = camAngle;
+	double currentAngle = angleRobot+angleCam;
+	
+	
+	
+	double targetX,targetY;
+    
+	targetX = originalX;
+
+	double length = 0;
+	double targetLength = movDistance;
+
+	if(currentAngle > 180)
+	{
+		currentAngle -= 360;
+	}
+	else if(currentAngle < -180)
+	{
+		currentAngle += 360;
+	}
+
+	targetY = tan(currentAngle*PI/180)*(targetX - originalX) + originalY;
+	length = sqrt((targetY - originalY)*(targetY - originalY) +(targetX - originalX)*(targetX - originalX));
+
+
+	while(length < targetLength)
+	{
+		if(currentAngle == 0)
+		{
+			targetX += 1;
+			length = abs(targetX - originalX);
+			continue;
+		}
+		else if(currentAngle == 180 || currentAngle == -180)
+		{
+			targetX -=1;
+			length = abs(targetX - originalX);
+			continue;
+		}
+		else if(currentAngle == 90)
+		{
+			targetY += 1;
+			length = abs(targetY - originalY);
+			continue;
+		}
+		else if(currentAngle == -90)
+		{
+			targetY -= 1;
+			length = abs(targetY - originalY);
+			continue;	
+		}
+		else if(currentAngle< 90 && currentAngle >-90)
+		{
+			targetX += 1;
+		}
+		else if((currentAngle > 90 &&currentAngle < 180)||(currentAngle > -180 && currentAngle < -90))
+		{
+			targetX -= 1;
+		}
+		targetY = tan(currentAngle*PI/180)*(targetX - originalX) + originalY;
+		length = sqrt((targetY - originalY)*(targetY - originalY) +(targetX - originalX)*(targetX - originalX));
+// 		cout << "Currently, the length from the original point is " << length << endl;
+	}
+
+	if(targetX >= 4600)
+	{
+	  targetX = 4400;
+	}
+	if(targetX <= -3600)
+	{
+	  targetX = -3400;
+	}
+	if(targetY >= 1000)
+	{
+	  targetY = 800;
+	}
+	if(targetY <= -4000)
+	{
+	  targetY = -3800;
+	}
+	
+	cout << "targetX is " << targetX << "targetY is " << targetY << endl;
+	
+	*outputX = targetX;
+	*outputY = targetY;
+
+	return;
+}
+
+
+
+
+
+
+
+//-------------------------Legacy---------------------------------------
+// int Turnangle=1;
+
+void turn_func( ArServerClient *serverclient, ArNetPacket *socket)
+{
+
+
+  
+//   G_PathPlanning->pathPlanToPose(ArPose(500,-500), true);
+//   while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+//   serverclient->sendPacketTcp(socket);
+
+
+//Path Planning Add by YMZ--------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+  
+  
+//   ptrPathPlanning->cancelPathPlan();
+//   if(ptrPathPlanning->pathPlanToPose(ArPose(0,0,0),1))
+//     printf("Heading to Home!\n"); 
+//     
+//   else printf("The Home location is not exist!");
+//   robot.lock();
+//   robot.setHeading(90*Turnangle);
+//   Turnangle++;
+//   robot.unlock();
+//   start.setToNow();
+// 	while (1)
+// 	{
+// 		robot.lock();
+// 		if (robot.isHeadingDone())
+// 		{
+// 			printf("directMotionExample: Finished turn\n");
+// 			robot.unlock();
+// 			ArUtil::sleep(50);
+// 			serverclient->sendPacketTcp(&pkg);
+// 			break;
+// 		}
+// 		if (start.mSecSince() > 5000)
+// 		{
+// 			printf("directMotionExample: Turn timed out\n");
+// 			robot.unlock();
+// 			serverclient->sendPacketTcp(&pkg);
+// 			break;
+// 		}
+// 		robot.unlock();
+// 		ArUtil::sleep(10);
+// 	}
+
+}
+
+
+
+// int findNeighbor(int *goal)
+// {
+//   
+//   double currentX = robot.getPose().getX();
+//   double currentY = robot.getPose().getY();
+//   int index = 0;  
+//   
+//   for(int i = 0; i < sizeof(goal);)
+//   {
+// 
+//     double min = abs(currentX - goal[i++]) + abs(currentY - goal[i++]);
+//     double max = abs(currentX - goal[i++]) + abs(currentY - goal[i++]);
+//     
+//     if(min <= max)
+//     {
+//       index = i - 3;
+//     }
+//     else
+//     {
+//       index = i - 1;
+//     }
+//   }
+//   
+//   return index;
+// }

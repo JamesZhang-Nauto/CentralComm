@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6C6F9723-1734-4BFC-B2A4-0FEC6751502A}</ProjectGuid>
+    <RootNamespace>Obj_Recognition</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files\Libraries\MobileRobots\Aria\ArNetworking\include;C:\Program Files\Libraries\MobileRobots\Aria\include;C:\Program Files\Libraries\boost_1_51_0;C:\Program Files\Libraries\opencv\build\include;C:\Program Files\boost_1_51_0;C:\Project\CentralClient\CentralClient\OR\DUtils;C:\Project\CentralClient\CentralClient\OR\DUtilsCV;C:\Project\CentralClient\CentralClient\OR\DVision;C:\Project\CentralClient\CentralClient\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Program Files\Libraries\MobileRobots\Aria\lib;C:\Program Files\Libraries\boost_1_51_0\libs;C:\Program Files\Libraries\opencv\build\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <SourcePath>
+    </SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files\Libraries\MobileRobots\Aria\ArNetworking\include;C:\Program Files\Libraries\MobileRobots\Aria\include;C:\Program Files\Libraries\boost_1_51_0;C:\Program Files\Libraries\opencv\build\include;C:\Program Files\boost_1_51_0;C:\Project\CentralClient\CentralClient\OR\DUtils;C:\Project\CentralClient\CentralClient\OR\DUtilsCV;C:\Project\CentralClient\CentralClient\OR\DVision;C:\Project\CentralClient\CentralClient\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Libraries\MobileRobots\Aria\lib;C:\Program Files\Libraries\boost_1_51_0\libs;C:\Program Files\Libraries\opencv\build\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>AriaVC10.lib;ArNetworkingVC10.lib;sapi.lib;ws2_32.lib;opencv_core243d.lib;opencv_highgui243d.lib;opencv_features2d243d.lib;opencv_flann243d.lib;opencv_calib3d243d.lib;opencv_contrib243d.lib;opencv_gpu243d.lib;opencv_imgproc243d.lib;opencv_legacy243d.lib;opencv_video243d.lib;opencv_ml243d.lib;opencv_nonfree243d.lib;opencv_objdetect243d.lib;opencv_photo243d.lib;opencv_stitching243d.lib;opencv_ts243d.lib;opencv_videostab243d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+      <AdditionalLibraryDirectories>C:\Program Files\Libraries\opencv\build\lib\Debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalIncludeDirectories>C:\Program Files\Libraries\opencv\build\lib\Release</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>AriaVC10.lib;ArNetworkingVC10.lib;sapi.lib;ws2_32.lib;opencv_core243.lib;opencv_highgui243.lib;opencv_features2d243.lib;opencv_flann243.lib;opencv_calib3d243.lib;opencv_contrib243.lib;opencv_gpu243.lib;opencv_imgproc243.lib;opencv_legacy243.lib;opencv_video243.lib;opencv_ml243.lib;opencv_nonfree243.lib;opencv_objdetect243.lib;opencv_photo243.lib;opencv_stitching243.lib;opencv_ts243.lib;opencv_videostab243.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Libraries\opencv\build\lib\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CentralClient\ObjectRecognition.h" />
+    <ClInclude Include="..\..\CentralClient\OR\BowVector.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DBoW2.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Drawing.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\DUtilsCV.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Geometry.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\GUI.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\IO.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Transformations.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Types.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\BinaryFile.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\ConfigFile.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\DException.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\dirent_win.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\DUtils.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\FileFunctions.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\FileModes.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\LineFile.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Math.hpp" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Profiler.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Random.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\STL.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\StringFunctions.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\TimeManager.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Timestamp.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\BRIEF.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\BundleCamera.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\DVision.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\FSolver.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\Matches.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PatchFile.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PixelPointFile.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PLYFile.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PMVSCamera.h" />
+    <ClInclude Include="..\..\CentralClient\OR\DVision\SurfSet.h" />
+    <ClInclude Include="..\..\CentralClient\OR\FBrief.h" />
+    <ClInclude Include="..\..\CentralClient\OR\FClass.h" />
+    <ClInclude Include="..\..\CentralClient\OR\FeatureVector.h" />
+    <ClInclude Include="..\..\CentralClient\OR\FSurf64.h" />
+    <ClInclude Include="..\..\CentralClient\OR\Homography.h" />
+    <ClInclude Include="..\..\CentralClient\OR\QueryResults.h" />
+    <ClInclude Include="..\..\CentralClient\OR\ScoringObject.h" />
+    <ClInclude Include="..\..\CentralClient\OR\TemplatedDatabase.h" />
+    <ClInclude Include="..\..\CentralClient\OR\TemplatedVocabulary.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\CentralClient\ObjectRecognition.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\BowVector.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Drawing.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Geometry.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\GUI.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\IO.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Transformations.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Types.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\BinaryFile.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\ConfigFile.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\FileFunctions.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\LineFile.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\Profiler.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\Random.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\StringFunctions.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\TimeManager.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\Timestamp.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\BRIEF.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\BundleCamera.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\FSolver.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\Matches.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PatchFile.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PixelPointFile.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PLYFile.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PMVSCamera.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\DVision\SurfSet.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\FBrief.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\FeatureVector.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\FSurf64.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\Homography.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\QueryResults.cpp" />
+    <ClCompile Include="..\..\CentralClient\OR\ScoringObject.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

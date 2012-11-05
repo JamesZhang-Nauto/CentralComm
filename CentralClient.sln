@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CentralClient", "CentralClient\CentralClient.vcxproj", "{5526B4A4-4FAA-4582-B0DE-7C0374D284C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CentralServer", "CentralServer\CentralServer.vcxproj", "{F9909D7A-9264-436A-84CB-E74140EAEB64}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Obj_Recognition", "Obj_Recognition\Obj_Recognition\Obj_Recognition.vcxproj", "{6C6F9723-1734-4BFC-B2A4-0FEC6751502A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TakePictures", "TakePictures\TakePictures.vcxproj", "{81E37470-2FBF-4165-B7B7-4D8505AA5640}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VocTree_Trainning", "VocTree_Trainning\VocTree_Trainning.vcxproj", "{D93FFE57-12ED-4096-8C61-1CE78412EC25}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BOW2", "BOW2\BOW2.vcxproj", "{6B4E92FA-10DE-4F42-AE86-682442B5569F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewAlgorithm", "NewAlgorithm\NewAlgorithm.vcxproj", "{C8B4256E-8642-41D2-B7A0-483F931862EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5526B4A4-4FAA-4582-B0DE-7C0374D284C4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5526B4A4-4FAA-4582-B0DE-7C0374D284C4}.Debug|Win32.Build.0 = Debug|Win32
+		{5526B4A4-4FAA-4582-B0DE-7C0374D284C4}.Release|Win32.ActiveCfg = Release|Win32
+		{5526B4A4-4FAA-4582-B0DE-7C0374D284C4}.Release|Win32.Build.0 = Release|Win32
+		{F9909D7A-9264-436A-84CB-E74140EAEB64}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9909D7A-9264-436A-84CB-E74140EAEB64}.Debug|Win32.Build.0 = Debug|Win32
+		{F9909D7A-9264-436A-84CB-E74140EAEB64}.Release|Win32.ActiveCfg = Release|Win32
+		{F9909D7A-9264-436A-84CB-E74140EAEB64}.Release|Win32.Build.0 = Release|Win32
+		{6C6F9723-1734-4BFC-B2A4-0FEC6751502A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C6F9723-1734-4BFC-B2A4-0FEC6751502A}.Debug|Win32.Build.0 = Debug|Win32
+		{6C6F9723-1734-4BFC-B2A4-0FEC6751502A}.Release|Win32.ActiveCfg = Release|Win32
+		{6C6F9723-1734-4BFC-B2A4-0FEC6751502A}.Release|Win32.Build.0 = Release|Win32
+		{81E37470-2FBF-4165-B7B7-4D8505AA5640}.Debug|Win32.ActiveCfg = Debug|Win32
+		{81E37470-2FBF-4165-B7B7-4D8505AA5640}.Debug|Win32.Build.0 = Debug|Win32
+		{81E37470-2FBF-4165-B7B7-4D8505AA5640}.Release|Win32.ActiveCfg = Release|Win32
+		{81E37470-2FBF-4165-B7B7-4D8505AA5640}.Release|Win32.Build.0 = Release|Win32
+		{D93FFE57-12ED-4096-8C61-1CE78412EC25}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D93FFE57-12ED-4096-8C61-1CE78412EC25}.Debug|Win32.Build.0 = Debug|Win32
+		{D93FFE57-12ED-4096-8C61-1CE78412EC25}.Release|Win32.ActiveCfg = Release|Win32
+		{D93FFE57-12ED-4096-8C61-1CE78412EC25}.Release|Win32.Build.0 = Release|Win32
+		{6B4E92FA-10DE-4F42-AE86-682442B5569F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B4E92FA-10DE-4F42-AE86-682442B5569F}.Debug|Win32.Build.0 = Debug|Win32
+		{6B4E92FA-10DE-4F42-AE86-682442B5569F}.Release|Win32.ActiveCfg = Release|Win32
+		{6B4E92FA-10DE-4F42-AE86-682442B5569F}.Release|Win32.Build.0 = Release|Win32
+		{C8B4256E-8642-41D2-B7A0-483F931862EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8B4256E-8642-41D2-B7A0-483F931862EE}.Debug|Win32.Build.0 = Debug|Win32
+		{C8B4256E-8642-41D2-B7A0-483F931862EE}.Release|Win32.ActiveCfg = Release|Win32
+		{C8B4256E-8642-41D2-B7A0-483F931862EE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

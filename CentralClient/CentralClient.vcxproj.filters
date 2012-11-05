@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\OR">
+      <UniqueIdentifier>{5837e252-a5a3-4779-bd48-6fe58b41b636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OR\DVision">
+      <UniqueIdentifier>{9167ab7f-8aec-4e51-8c20-cea1cce725e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OR\DUtils">
+      <UniqueIdentifier>{405b41fb-c53a-4a8f-ae5a-c79329780563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OR\DUtilsCV">
+      <UniqueIdentifier>{b0e366c2-aa86-44f6-a309-44588b13c26f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR">
+      <UniqueIdentifier>{3b12c486-1d47-4a09-8d12-734b0bb2fa7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR\DVision">
+      <UniqueIdentifier>{964c8fa3-b29f-4a7c-92c6-0ffc0c7d7f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR\DUtilsCV">
+      <UniqueIdentifier>{64bab247-1187-47ff-8e9b-56ed85650689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GlassesMotion">
+      <UniqueIdentifier>{0edcdb2e-02f4-4b18-bc40-a7e77499be6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GlassesMotion">
+      <UniqueIdentifier>{5122ecc3-21bb-4dcf-b29c-fc61bc021050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR\DUtils">
+      <UniqueIdentifier>{9440ed35-16ef-45a7-b156-11941582fa93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OR\DUtils\BinaryFile.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\Timestamp.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\ConfigFile.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\DException.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\dirent_win.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\DUtils.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\FileFunctions.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\FileModes.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\LineFile.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\Math.hpp">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\Profiler.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\Random.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\STL.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\StringFunctions.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtils\TimeManager.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\Types.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\Drawing.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\DUtilsCV.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\Geometry.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\GUI.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\IO.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DUtilsCV\Transformations.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\BRIEF.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\SurfSet.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\BundleCamera.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\DVision.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\FSolver.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\Matches.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\PatchFile.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\PixelPointFile.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\PLYFile.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DVision\PMVSCamera.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\BowVector.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\TemplatedVocabulary.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\DBoW2.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\FBrief.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\FClass.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\FeatureVector.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\FSurf64.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\Homography.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\QueryResults.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\ScoringObject.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="OR\TemplatedDatabase.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="GlassesMotion\CircularBuffer.h">
+      <Filter>Header Files\GlassesMotion</Filter>
+    </ClInclude>
+    <ClInclude Include="GlassesMotion\svm.h">
+      <Filter>Header Files\GlassesMotion</Filter>
+    </ClInclude>
+    <ClInclude Include="CommReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlassesMotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glassesVideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotVideoReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="OR\DUtilsCV\Drawing.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtilsCV\Types.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtilsCV\Geometry.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtilsCV\GUI.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtilsCV\IO.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtilsCV\Transformations.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\BRIEF.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\SurfSet.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\BundleCamera.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\FSolver.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\Matches.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\PatchFile.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\PixelPointFile.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\PLYFile.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DVision\PMVSCamera.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\BowVector.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\ScoringObject.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\FBrief.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\FeatureVector.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\FSurf64.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\Homography.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\QueryResults.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="GlassesMotion\svm.cpp">
+      <Filter>Source Files\GlassesMotion</Filter>
+    </ClCompile>
+    <ClCompile Include="GlassesMotion\CircularBuffer.cpp">
+      <Filter>Source Files\GlassesMotion</Filter>
+    </ClCompile>
+    <ClCompile Include="CommReceiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlassesMotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glassesVideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotVideoReceiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clientMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\BinaryFile.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\ConfigFile.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\FileFunctions.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\LineFile.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\Profiler.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\Random.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\StringFunctions.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\TimeManager.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="OR\DUtils\Timestamp.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

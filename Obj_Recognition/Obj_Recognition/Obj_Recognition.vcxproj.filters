@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\OR">
+      <UniqueIdentifier>{b6e0e50d-47f9-4565-b7ba-a3b7e98ffea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OR\DVision">
+      <UniqueIdentifier>{e220b8b7-e71e-418b-af88-b43e2e4293c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OR\DUtils">
+      <UniqueIdentifier>{5bf1b82b-8774-4d6a-aaa0-16bdd270f8d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OR\DUtilsCV">
+      <UniqueIdentifier>{c2c35294-2629-4453-ae17-8522d6e48f5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR">
+      <UniqueIdentifier>{65244674-651b-4d98-b8e6-3d59d0dce24e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR\DVision">
+      <UniqueIdentifier>{bde4b574-461b-4ddd-b661-7d7c788aa40e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR\DUtilsCV">
+      <UniqueIdentifier>{c4ed53d8-46dc-4b26-9272-f1f698f9e31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OR\DUtils">
+      <UniqueIdentifier>{6bd0d72b-2458-40b5-b539-1b023cfc5422}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CentralClient\OR\BowVector.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DBoW2.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\FBrief.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\FClass.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\FeatureVector.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\FSurf64.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\Homography.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\QueryResults.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\ScoringObject.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\TemplatedDatabase.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\TemplatedVocabulary.h">
+      <Filter>Header Files\OR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\BRIEF.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\BundleCamera.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\DVision.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\FSolver.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\Matches.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PatchFile.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PixelPointFile.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PLYFile.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\PMVSCamera.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DVision\SurfSet.h">
+      <Filter>Header Files\OR\DVision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\BinaryFile.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\ConfigFile.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\DException.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\dirent_win.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\DUtils.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\FileFunctions.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\FileModes.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\LineFile.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Math.hpp">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Profiler.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Random.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\STL.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\StringFunctions.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\TimeManager.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtils\Timestamp.h">
+      <Filter>Header Files\OR\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Drawing.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\DUtilsCV.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Geometry.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\GUI.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\IO.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Transformations.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\OR\DUtilsCV\Types.h">
+      <Filter>Header Files\OR\DUtilsCV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CentralClient\ObjectRecognition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\CentralClient\OR\BowVector.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\FBrief.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\FeatureVector.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\FSurf64.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\Homography.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\QueryResults.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\ScoringObject.cpp">
+      <Filter>Source Files\OR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\BRIEF.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\BundleCamera.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\FSolver.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\Matches.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PatchFile.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PixelPointFile.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PLYFile.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\PMVSCamera.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DVision\SurfSet.cpp">
+      <Filter>Source Files\OR\DVision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Drawing.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Geometry.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\GUI.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\IO.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Transformations.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtilsCV\Types.cpp">
+      <Filter>Source Files\OR\DUtilsCV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\BinaryFile.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\ConfigFile.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\FileFunctions.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\LineFile.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\Profiler.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\Random.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\StringFunctions.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\TimeManager.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\OR\DUtils\Timestamp.cpp">
+      <Filter>Source Files\OR\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CentralClient\ObjectRecognition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

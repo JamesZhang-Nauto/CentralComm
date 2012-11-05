@@ -1,0 +1,29 @@
+DBoW2: bag-of-words library for C++ with generic descriptors
+Copyright (c) 2012 Dorian Galvez-Lopez
+
+This software is licensed under CC-BY-NC-SA. For more information, visit
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+To obtain a commercial license, contact the author.
+
+To use this software for non-commercial purposes, please attibute the work
+to the original author:
+Dorian Galvez-Lopez. University of Zaragoza.
+http://webdiis.unizar.es/~dorian
+
+If you use it in an academic work, please cite:
+
+  @INPROCEEDINGS{GalvezIROS11,
+    author={Galvez-Lopez, Dorian and Tardos, Juan D.},
+    booktitle={Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on},
+    title={Real-time loop detection with bags of binary words},
+    year={2011},
+    month={sept.},
+    volume={},
+    number={},
+    pages={51 -58},
+    keywords={},
+    doi={10.1109/IROS.2011.6094885},
+    ISSN={2153-0858}
+  }
+

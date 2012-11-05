@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BowVector.cpp" />
+    <ClCompile Include="demo.cpp" />
+    <ClCompile Include="DUtils\BinaryFile.cpp" />
+    <ClCompile Include="DUtils\ConfigFile.cpp" />
+    <ClCompile Include="DUtils\FileFunctions.cpp" />
+    <ClCompile Include="DUtils\LineFile.cpp" />
+    <ClCompile Include="DUtils\Profiler.cpp" />
+    <ClCompile Include="DUtils\Random.cpp" />
+    <ClCompile Include="DUtils\StringFunctions.cpp" />
+    <ClCompile Include="DUtils\TimeManager.cpp" />
+    <ClCompile Include="DUtils\Timestamp.cpp" />
+    <ClCompile Include="FBrief.cpp" />
+    <ClCompile Include="FeatureVector.cpp" />
+    <ClCompile Include="FSurf64.cpp" />
+    <ClCompile Include="Homography.cpp" />
+    <ClCompile Include="QueryResults.cpp" />
+    <ClCompile Include="ScoringObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BowVector.h" />
+    <ClInclude Include="DBoW2.h" />
+    <ClInclude Include="DUtils\BinaryFile.h" />
+    <ClInclude Include="DUtils\ConfigFile.h" />
+    <ClInclude Include="DUtils\DException.h" />
+    <ClInclude Include="DUtils\dirent_win.h" />
+    <ClInclude Include="DUtils\DUtils.h" />
+    <ClInclude Include="DUtils\FileFunctions.h" />
+    <ClInclude Include="DUtils\FileModes.h" />
+    <ClInclude Include="DUtils\LineFile.h" />
+    <ClInclude Include="DUtils\Math.hpp" />
+    <ClInclude Include="DUtils\Profiler.h" />
+    <ClInclude Include="DUtils\Random.h" />
+    <ClInclude Include="DUtils\STL.h" />
+    <ClInclude Include="DUtils\StringFunctions.h" />
+    <ClInclude Include="DUtils\TimeManager.h" />
+    <ClInclude Include="DUtils\Timestamp.h" />
+    <ClInclude Include="FBrief.h" />
+    <ClInclude Include="FClass.h" />
+    <ClInclude Include="FeatureVector.h" />
+    <ClInclude Include="FSurf64.h" />
+    <ClInclude Include="Homography.h" />
+    <ClInclude Include="QueryResults.h" />
+    <ClInclude Include="ScoringObject.h" />
+    <ClInclude Include="TemplatedDatabase.h" />
+    <ClInclude Include="TemplatedVocabulary.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6B4E92FA-10DE-4F42-AE86-682442B5569F}</ProjectGuid>
+    <RootNamespace>BOW2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files\Libraries\boost_1_51_0;C:\Program Files\Libraries\opencv\build\include;./DUtils;./DVision;./DUtilsCV;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Libraries\boost_1_51_0\libs;C:\Program Files\Libraries\opencv\build\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_core242.lib;opencv_highgui242.lib;opencv_features2d242.lib;opencv_flann242.lib;opencv_calib3d242.lib;opencv_haartraining_engine.lib;opencv_contrib242.lib;opencv_gpu242.lib;opencv_imgproc242.lib;opencv_legacy242.lib;opencv_video242.lib;opencv_ml242.lib;opencv_nonfree242.lib;opencv_objdetect242.lib;opencv_photo242.lib;opencv_stitching242.lib;opencv_ts242.lib;opencv_videostab242.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Libraries\opencv\build\lib\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

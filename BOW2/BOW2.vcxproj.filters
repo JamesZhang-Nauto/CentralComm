@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\DUtils">
+      <UniqueIdentifier>{f1eb9752-3c99-48f6-9420-51fada090207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DUtils">
+      <UniqueIdentifier>{8f7bac51-5acb-4ecd-b2ea-bad97299c021}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryResults.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoringObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BowVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBrief.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FSurf64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Homography.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\TimeManager.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\Timestamp.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\BinaryFile.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\ConfigFile.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\FileFunctions.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\LineFile.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\Profiler.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\Random.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="DUtils\StringFunctions.cpp">
+      <Filter>Source Files\DUtils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TemplatedVocabulary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BowVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoW2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBrief.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FSurf64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Homography.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryResults.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoringObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplatedDatabase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\TimeManager.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\Timestamp.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\BinaryFile.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\ConfigFile.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\DException.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\dirent_win.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\DUtils.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\FileFunctions.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\FileModes.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\LineFile.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\Math.hpp">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\Profiler.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\Random.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\STL.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DUtils\StringFunctions.h">
+      <Filter>Header Files\DUtils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

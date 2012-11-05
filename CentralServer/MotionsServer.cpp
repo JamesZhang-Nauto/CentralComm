@@ -1,0 +1,242 @@
+
+
+#include "MotionsServer.h"
+#define ANGAL_FOR_TURN 15
+
+
+
+extern ArPathPlanningTask* G_PathPlanning;
+extern ArRobot robot;
+
+extern ArVCC4* G_PTZHandler;		//from KeyPtz.cpp
+// extern ArAnalogGyro *G_gyro;
+
+int goals[8] = {-3000,500,-3000,3000,-500,3000,-500,0};
+
+int findNeighbor(int *goals);
+int goalIndex = 0;
+
+
+void S_RobotMotion( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  while(goalIndex != 8)
+  {
+    cout << robot.getPose().getX() << endl;
+    cout << robot.getPose().getY() << endl;
+    cout << " current heading: " << "    " << robot.getTh()<<endl;
+//  G_PathPlanning->pathPlanToPose(ArPose(300,0), true);
+
+
+    G_PathPlanning->pathPlanToPose(ArPose(goals[goalIndex++],goals[goalIndex++]), true,true);
+
+
+    while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+    cout << " current heading: " << "    " << robot.getTh()<<endl;
+    serverclient->sendPacketTcp(socket);
+  
+  }
+//  
+//   ArNetPacket feedback;
+//   cout << "join path planning" << endl;
+// 
+//   G_PathPlanning->pathPlanToPose(ArPose(goals[goalIndex++],goals[goalIndex++]),true);
+//   
+//   cout << "end path planning" << endl;
+//   
+//   while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+//   
+//   cout << "exit pathPlaning" << endl;
+// //   char *buffer = "999";
+//   
+// //   sprintf(buffer,"%d %d point arrives",500,500);
+// //   feedback.setArbitraryString(buffer);
+//   
+//   serverclient->sendPacketTcp(socket);
+
+  
+  
+}
+
+void basic_turn(int turnAngal)
+{
+  ArTime start;
+  
+  robot.lock();
+  robot.setHeading(robot.getTh()+turnAngal);
+  robot.unlock();
+  
+  start.setToNow();
+  while (1)
+  {
+	  robot.lock();
+	  if (robot.isHeadingDone())
+	  {
+		  printf(" Finished turn\n");
+		  robot.unlock();
+		  ArUtil::sleep(50);
+		  cout << " current heading: " << "    " << robot.getTh()<<endl;
+		  break;
+	  }
+	  if (start.mSecSince() > 5000)
+	  {
+		  printf(" Turn timed out\n");
+		  robot.unlock();
+		  cout << " current heading: " << "    " << robot.getTh()<<endl;
+		  break;
+	  }
+	  robot.unlock();
+	  ArUtil::sleep(10);
+  }  
+}
+
+int CameraMoveCount = 0;
+void S_CameraMotion( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  
+  if((++CameraMoveCount) <= 3)
+  {
+    G_PTZHandler->panRel(30);
+    cout << " Current pan = " << G_PTZHandler->getPan() << endl;
+  }
+  else
+  {
+    if(CameraMoveCount==4) G_PTZHandler->reset();
+    ArUtil::sleep(100);
+    G_PTZHandler->panRel(-30);
+    cout << " Current pan = " << G_PTZHandler->getPan() << endl;
+    if (CameraMoveCount==6) {CameraMoveCount=0;G_PTZHandler->reset();}
+  }
+  
+  //if
+  ArTime timer;
+  timer.setToNow();
+  ArUtil::sleep(3000);
+  cout << timer.mSecSince() <<endl;
+  serverclient->sendPacketTcp(socket);
+
+//   static float angle = 1;
+//   ArNetPacket feedback;
+//   if(G_PTZHandler->getPan() >= 90 ||G_PTZHandler->getPan() <= -90)
+//   {
+//     G_PTZHandler->reset();
+//     angle *= -1/3;
+//   }
+//   
+//   G_PTZHandler->getPan(45*angle);
+//   if(angle >=0 ) 
+//     angle++;
+//   else 
+//     angle--;
+//   
+//   char *buffer = "1024";
+//   
+//   feedback.setArbitraryString(buffer);
+//   
+//   serverclient->sendPacketTcp(&feedback);
+}
+
+
+void S_RobotTurnLeft( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  cout << "turn left" <<endl;
+  //basic_turn(ANGAL_FOR_TURN);
+  serverclient->sendPacketTcp(socket);
+}
+
+
+void S_RobotTurnRight( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  cout << "turn right" <<endl;
+  //basic_turn(-ANGAL_FOR_TURN);
+  serverclient->sendPacketTcp(socket);
+}
+
+
+void S_TargetApproach( ArServerClient *serverclient, ArNetPacket *socket)
+{
+  cout << "The last step: TargetApproach!" <<endl;
+//   G_PathPlanning->pathPlanToPose(ArPose(600,-300), true);
+//   while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+}
+
+
+//-------------------------Legacy---------------------------------------
+// int Turnangle=1;
+
+void turn_func( ArServerClient *serverclient, ArNetPacket *socket)
+{
+
+
+  
+//   G_PathPlanning->pathPlanToPose(ArPose(500,-500), true);
+//   while(G_PathPlanning->getState() != ArPathPlanningTask::REACHED_GOAL );
+//   serverclient->sendPacketTcp(socket);
+
+
+//Path Planning Add by YMZ--------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+  
+  
+//   ptrPathPlanning->cancelPathPlan();
+//   if(ptrPathPlanning->pathPlanToPose(ArPose(0,0,0),1))
+//     printf("Heading to Home!\n"); 
+//     
+//   else printf("The Home location is not exist!");
+//   robot.lock();
+//   robot.setHeading(90*Turnangle);
+//   Turnangle++;
+//   robot.unlock();
+//   start.setToNow();
+// 	while (1)
+// 	{
+// 		robot.lock();
+// 		if (robot.isHeadingDone())
+// 		{
+// 			printf("directMotionExample: Finished turn\n");
+// 			robot.unlock();
+// 			ArUtil::sleep(50);
+// 			serverclient->sendPacketTcp(&pkg);
+// 			break;
+// 		}
+// 		if (start.mSecSince() > 5000)
+// 		{
+// 			printf("directMotionExample: Turn timed out\n");
+// 			robot.unlock();
+// 			serverclient->sendPacketTcp(&pkg);
+// 			break;
+// 		}
+// 		robot.unlock();
+// 		ArUtil::sleep(10);
+// 	}
+
+}
+
+
+
+// int findNeighbor(int *goal)
+// {
+//   
+//   double currentX = robot.getPose().getX();
+//   double currentY = robot.getPose().getY();
+//   int index = 0;  
+//   
+//   for(int i = 0; i < sizeof(goal);)
+//   {
+// 
+//     double min = abs(currentX - goal[i++]) + abs(currentY - goal[i++]);
+//     double max = abs(currentX - goal[i++]) + abs(currentY - goal[i++]);
+//     
+//     if(min <= max)
+//     {
+//       index = i - 3;
+//     }
+//     else
+//     {
+//       index = i - 1;
+//     }
+//   }
+//   
+//   return index;
+// }
