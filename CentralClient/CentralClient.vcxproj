@@ -40,7 +40,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>C:\Program Files\Libraries\opencv\build\x86\vc10\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>C:\Program Files\Libraries\MobileRobots\Aria\ArNetworking\include;C:\Program Files\Libraries\MobileRobots\Aria\include;C:\Program Files\Libraries\boost_1_51_0;C:\Program Files\Libraries\opencv\build\include\opencv;C:\Program Files\Libraries\opencv\build\include\opencv2;C:\Program Files\Libraries\opencv\build\include;C:\Program Files\boost_1_51_0;C:\Project\CentralClient\CentralClient\OR\DUtils;C:\Project\CentralClient\CentralClient\OR\DUtilsCV;C:\Project\CentralClient\CentralClient\OR\DVision;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\Libraries\MobileRobots\Aria\ArNetworking\include;C:\Program Files\Libraries\MobileRobots\Aria\include;C:\Program Files\Libraries\boost_1_51_0;C:\Program Files\Libraries\opencv\build\include\opencv;C:\Program Files\Libraries\opencv\build\include\opencv2;C:\Program Files\Libraries\opencv\build\include;C:\Program Files\boost_1_51_0;.\OR\DUtils;.\OR\DUtilsCV;.\OR\DVision;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\Libraries\MobileRobots\Aria\lib;C:\Program Files\Libraries\boost_1_51_0\libs;C:\Program Files\Libraries\opencv\build\x86\vc10\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -60,7 +60,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_core242d.lib;opencv_highgui242d.lib;opencv_features2d242d.lib;opencv_flann242d.lib;opencv_calib3d242d.lib;opencv_haartraining_engined.lib;opencv_contrib242d.lib;opencv_gpu242d.lib;opencv_imgproc242d.lib;opencv_legacy242d.lib;opencv_video242d.lib;opencv_ml242d.lib;opencv_nonfree242d.lib;opencv_objdetect242d.lib;opencv_photo242d.lib;opencv_stitching242d.lib;opencv_ts242d.lib;opencv_videostab242d.lib;AriaDebugVC10.lib;ArNetworkingDebugVC10.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>AriaVC10.lib;ArNetworkingVC10.lib;sapi.lib;ws2_32.lib;opencv_core243d.lib;opencv_highgui243d.lib;opencv_features2d243d.lib;opencv_flann243d.lib;opencv_calib3d243d.lib;opencv_contrib243d.lib;opencv_gpu243d.lib;opencv_imgproc243d.lib;opencv_legacy243d.lib;opencv_video243d.lib;opencv_ml243d.lib;opencv_nonfree243d.lib;opencv_objdetect243d.lib;opencv_photo243d.lib;opencv_stitching243d.lib;opencv_ts243d.lib;opencv_videostab243d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
